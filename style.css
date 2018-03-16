@@ -1,0 +1,29 @@
+/* Styles go here */
+
+.tag {
+    background-color:  #1aa3ff;
+    color: white;
+    font-weight: 500;
+    border-radius: .25em;
+    display: inline-block;
+    padding: 0.4em 0.7em;
+    margin: 0.2em;
+   margin-left: 8px;
+}
+
+.close {
+    float: right;
+    margin-left: 4px;
+    font-size: 14px;
+    font-weight: bold;
+    line-height: 2;
+    color: #000;
+    text-shadow: 0 1px 0 #fff;
+    opacity: .2;
+    filter: alpha(opacity=20);
+}
+
+.st{
+  font-weight: 400;
+  font-size: 60px;
+}

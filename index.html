@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html ng-app="App">
+
+  <head>
+    <link data-require="bootstrap@4.0.5" data-semver="4.0.5" rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css" />
+    <script data-require="bootstrap@4.0.5" data-semver="4.0.5" src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.5/js/bootstrap.min.js"></script>
+    <script data-require="angular.js@1.6.6" data-semver="1.6.6" src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.6/angular.min.js"></script>
+    <link rel="stylesheet" href="style.css" />
+    <script src="script.js"></script>
+  </head>
+
+  <body ng-controller="MainCtrl" class="container-fluid">
+   {{Message}}
+        <br />
+    <div class="card st">
+    
+    {{minutes}}m : {{seconds}}s
+  </div>
+    <br />
+
+   {{bMessage}}
+   {{alert}}
+        <br />
+    <div class="card st" id="elementToChange">
+   
+    {{bminutes}}m : {{bseconds}}s
+  </div>
+    <br />
+    <div class="card-body">
+      <button class="btn btn-success" ng-click="start()">start</button>
+      <button class="btn btn-danger" ng-click="stop()">stop</button>
+      <button class="btn btn-warning" ng-click="breaking()">break</button>
+      <button class="btn btn-default" ng-click="resume()">resume</button>
+    </div>
+    <br />
+    <h2>My Todo List</h2>
+    <div class="form-group input-group-lg">
+      <form ng-submit="addItem()">
+        <table>
+          <tbody>
+            <tr>
+              <td>
+                <input class="form-control input-lg" type="text" ng-model="value" placeholder="Add new item" />
+              </td>
+              <td>
+                <input class="btn btn-default" type="submit" value="Add" />
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </form>
+    </div>
+    <div ng-repeat="x in list">
+    {{$index + 1}}.
+          <li class="tag">{{x}}
+              <button class="close" ng-click="removeItem(x)">
+          <span aria-hidden="true">x</span>
+        </button>
+      </li>
+    </div>
+  </body>
+
+</html>
